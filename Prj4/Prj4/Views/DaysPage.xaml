@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             mc:Ignorable="d"
+             x:Class="Prj4.Views.DaysPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="header" FontSize="Medium" HorizontalTextAlignment="Center"/>
+            <ListView x:Name="lv" ItemTapped="lv_ItemTapped"></ListView>
+            <skia:SKCanvasView x:Name="view" PaintSurface="PaintSurface" HeightRequest="400"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

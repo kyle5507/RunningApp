@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Prj4.Views.Event"
+             Title="Event">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="3,20,3,10" x:Name="layout">
+            <Image Source="run.png" HeightRequest="50"/>
+            <StackLayout Orientation="Vertical">
+                <DatePicker x:Name="datePick"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="labelDistance" VerticalOptions="Center" Text="Distance Miles"/>
+                    <Entry Text="0" VerticalOptions="End" x:Name="Mile" WidthRequest="40"></Entry>
+                    <Label Text="." VerticalOptions="Center"/>
+                    <Entry Text="0" x:Name="MileDec" VerticalOptions="End" WidthRequest="40"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Time Hours" VerticalOptions="Center"/>
+                    <Entry Text="0" x:Name="TimeHr" VerticalOptions="End" WidthRequest="40"></Entry>
+                    <Label Text=":" VerticalOptions="Center"/>
+                    <Entry Text="0" x:Name="TimeMin" VerticalOptions="End" WidthRequest="40"></Entry>
+                </StackLayout>
+            </StackLayout>
+            <ListView x:Name="EventList" ItemSelected="EventList_ItemSelected"/>
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <Button Text="Add" Clicked="Add_Clicked"/>
+                <Button Text="Update" Clicked="Update_Clicked"/>
+                <Button Text="Delete" Clicked="Delete_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
